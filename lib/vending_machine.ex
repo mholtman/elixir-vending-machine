@@ -4,15 +4,15 @@ defmodule VendingMachine do
   """
 
   @doc """
-  Hello world.
+  insert_coin(coin)
 
   ## Examples
 
-      iex> VendingMachine.hello
-      :world
+      iex> VendingMachine.insert_coin(coin)
+      "coin"
 
   """
-  def hello do
-    :world
+  def insert_coin(coin) do
+    coin
   end
 end
