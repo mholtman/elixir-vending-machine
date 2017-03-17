@@ -6,7 +6,8 @@ RUN apt-get update && apt-get install -y wget && \
     apt-get update && \
     apt-get install -y \
         esl-erlang \
-        elixir
+        elixir \
+        inotify-tools
 
 # Set the locale
 RUN locale-gen en_US.UTF-8
@@ -15,6 +16,10 @@ ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 
 RUN mix local.hex --force
+RUN mix local.rebar --force
+
+LABEL vendor=Space\ Scotch\ dot\ com \
+      com.spacescotch.version="0.2"
 
 CMD ["/bin/bash"]
 
