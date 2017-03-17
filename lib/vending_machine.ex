@@ -8,10 +8,11 @@ defmodule VendingMachine do
 
   ## Examples
 
-      iex> VendingMachine.insert_coin(coin)
+      iex> VendingMachine.insert_coin("coin")
       "coin"
 
   """
+  @spec insert_coin(String.t) :: String.t
   def insert_coin(coin) do
     coin
   end

@@ -1,6 +1,6 @@
 defmodule VendingMachineTest do
   use ExUnit.Case
-  #doctest VendingMachine
+  doctest VendingMachine
 
   test "can insert quarter" do
     assert VendingMachine.insert_coin("quarter") == "quarter"
