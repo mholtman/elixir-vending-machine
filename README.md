@@ -6,31 +6,28 @@ Vending Machine kata in Elixir. [User stories for the vending machine](https://g
 
 ```
 docker build  -t elixir-ubuntu .
-docker run -it --rm -v "$PWD":/usr/src/elixir-vending-machine -w /usr/src/elixir-vending-machine elixir-ubuntu
 
 ```
 
 ## Dependencies
 ```
-mix deps.get
+DOCKER_IMAGE_OVERRIDE=elixir-ubuntu bin/mix deps.get
 ```
 
 ## Build / Test
 
-Once you're in the container, run the following:
-
 ```
-mix test
+DOCKER_IMAGE_OVERRIDE=elixir-ubuntu bin/mix test
 ```
 Or if you prefer to run tests every time the test files are saved, you can run [mix-test.watch](https://github.com/lpil/mix-test.watch):
 ```
-mix test.watch
+DOCKER_IMAGE_OVERRIDE=elixir-ubuntu bin/mix test.watch
 ```
 
 ## Static Code Analysis
 
 Using the excellent [Credo](http://credo-ci.org/) for consistency and analysis.
 ```
-mix credo --strict
+DOCKER_IMAGE_OVERRIDE=elixir-ubuntu bin/mix credo --strict
 ```
 
