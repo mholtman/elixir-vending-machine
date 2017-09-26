@@ -5,8 +5,8 @@ RUN apt-get update && apt-get install -y wget && \
     dpkg -i erlang-solutions_1.0_all.deb && \
     apt-get update && \
     apt-get install -y \
-        esl-erlang \
-        elixir \
+        esl-erlang=1:20.0 \
+        elixir=1.5.1-1 \
         inotify-tools \
         locales
 
