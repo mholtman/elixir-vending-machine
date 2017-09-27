@@ -8,7 +8,7 @@ main() {
 
   COMMANDS_RUN_IN_CONTAINER="$*"
 
-  exec "${COMMAND_RUN_ON_HOST[@]}" /bin/sh -c "${COMMANDS_RUN_IN_CONTAINER[@]}"
+  exec "${COMMAND_RUN_ON_HOST[@]}" /bin/ash -c "${COMMANDS_RUN_IN_CONTAINER[@]}"
 }
 
 append_tty_args_when_connected_to_tty() {
