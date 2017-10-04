@@ -1,4 +1,4 @@
-FROM elixir:1.5.1-alpine
+FROM elixir:1.5.2-alpine
 
 RUN apk update && apk add inotify-tools
 
