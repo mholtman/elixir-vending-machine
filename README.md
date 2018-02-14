@@ -31,3 +31,4 @@ Using the excellent [Credo](http://credo-ci.org/) for consistency and analysis.
 DOCKER_IMAGE_OVERRIDE=elixir-ubuntu bin/mix credo --strict
 ```
 
+Currently building using AWS Code Pipeline
